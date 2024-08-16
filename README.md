@@ -1,6 +1,6 @@
 # Projeto Fetch GitHub API 🌐
 
-![imagem-final]
+![imagem-final](https://github.com/user-attachments/assets/f1305aee-52d1-418e-ad34-4df59e022546)
 
 ## Visão Geral 💡
 
@@ -19,14 +19,6 @@ Desenvolvi um site simples para testar e aprimorar meus conhecimentos sobre a AP
 
 2. Tratamento de Erros: Implementar o tratamento de erros é crucial para garantir que o usuário receba feedback adequado caso algo dê errado.
 
-## Resultado Final ✨
-
-![projeto-fetch-github-api]
-
 ## Link para o deploy 🌐
 
 [Projeto Fetch GitHub API](https://madu-guimaraes.github.io/fetch-github-api/)
-
-## Design Responsivo 📱🖥️
-
-![projeto-fetch-github-api]
