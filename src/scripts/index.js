@@ -6,6 +6,41 @@ import { getPushEvent } from "./services/pushEvent.js"
 import { user } from "./objects/user.js"
 import { screen } from "./objects/screen.js"
 
+
+//tela de carregamento
+document.getElementById('btn-search').addEventListener('click', () => {
+    const userName = document.getElementById('input-search').value;
+    if (validateEmptyInput(userName)) return;
+
+    showLoading(); // Mostra a tela de carregamento
+    getUserData(userName).finally(() => {
+        hideLoading(); // Esconde a tela de carregamento quando os dados forem carregados
+    });
+});
+
+document.getElementById('input-search').addEventListener('keyup', (e) => {
+    const userName = e.target.value;
+    const key = e.which || e.keyCode;
+    const isEnterKeyPressed = key === 13;
+
+    if (isEnterKeyPressed) {
+        if (validateEmptyInput(userName)) return;
+
+        showLoading(); // Mostra a tela de carregamento
+        getUserData(userName).finally(() => {
+            hideLoading(); // Esconde a tela de carregamento quando os dados forem carregados
+        });
+    }
+});
+
+function showLoading() {
+    document.getElementById('loading-screen').classList.remove('hide');
+}
+
+function hideLoading() {
+    document.getElementById('loading-screen').classList.add('hide');
+}
+
 document.getElementById('btn-search').addEventListener('click', () => {
     //precisa pegar o que estiver escrito no input e enviar para a api do github
     const userName = document.getElementById('input-search').value
